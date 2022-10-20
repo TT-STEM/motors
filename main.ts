@@ -51,9 +51,9 @@ namespace HC_motor
 
     // Directions the motors can rotate.
     export enum MotorDirection {
-        //% block="➕"
+        //% block="\u2795"
         CW,
-	//% block="➖"
+	//% block="\u2796"
         CCW        
     }
 
