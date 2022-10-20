@@ -53,7 +53,7 @@ namespace HC_motor
     export enum MotorDirection {
         //% block="\uf067"
         CW,
-	//% block=" - "
+	//% block="-"
         CCW        
     }
 
