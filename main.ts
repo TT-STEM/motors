@@ -14,7 +14,7 @@ namespace HC_motor
     let SERVO_REG_DISTANCE = 4
     
     //To get the PWM pulses to the correct size and zero offset these are the default numbers. 
-    let SERVO_MULTIPLIER = 188 //226 for FS90, 188 for SG90
+    let SERVO_MULTIPLIER = 189 //226 for FS90, 188 for SG90
     let SERVO_ZERO_OFFSET = 0x66
 
     // List of servos for the servo block to use. These represent register offsets in the PCA9865 driver IC.
@@ -51,10 +51,10 @@ namespace HC_motor
 
     // Directions the motors can rotate.
     export enum MotorDirection {
-        //% block="[+]"
-        CW,
-	//% block="[–]"
-        CCW        
+        //% block="\u2795"
+        PLUS,
+	//% block="\u2796"
+        MINUS
     }
 
     // The Robotics board can be configured to use different I2C addresses, these are all listed here.
@@ -163,7 +163,7 @@ namespace HC_motor
         let highByte = false
 
         switch (dir) {
-            case MotorDirection.CW:
+            case MotorDirection.PLUS:
 		if (motor == Motors.Motor1 || motor == Motors.Motor3){
 		    if (outputVal > 0xFF) {
                 	highByte = true
@@ -215,7 +215,7 @@ namespace HC_motor
                     pins.i2cWriteBuffer(chipAddress, buf, false)
 		}                
                 break
-            case MotorDirection.CCW:
+            case MotorDirection.MINUS:
                 if (motor == Motors.Motor1 || motor == Motors.Motor3){
 		    if (outputVal > 0xFF) {
                 	highByte = true
