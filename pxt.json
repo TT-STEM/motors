@@ -1,6 +1,6 @@
 {
     "name": "motors",
-    "description": "",
+    "description": "This library is HC Motors. Please use this under Trumptech Trainer guidance.",
     "dependencies": {
         "core": "*",
         "radio": "*",
