@@ -14,7 +14,7 @@ namespace HC_motor
     let SERVO_REG_DISTANCE = 4
     
     //To get the PWM pulses to the correct size and zero offset these are the default numbers. 
-    let SERVO_MULTIPLIER = 189 //226 for FS90, 188 for SG90
+    let SERVO_MULTIPLIER = 188 //226 for FS90, 188 for SG90
     let SERVO_ZERO_OFFSET = 0x66
 
     // List of servos for the servo block to use. These represent register offsets in the PCA9865 driver IC.
@@ -51,9 +51,9 @@ namespace HC_motor
 
     // Directions the motors can rotate.
     export enum MotorDirection {
-        //% block="CW"
+        //% block="\uf067"
         CW,
-	//% block="CCW"
+	//% block=" - "
         CCW        
     }
 
